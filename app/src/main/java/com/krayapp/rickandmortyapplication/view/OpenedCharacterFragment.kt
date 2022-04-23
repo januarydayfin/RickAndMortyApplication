@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.krayapp.rickandmortyapplication.NetworkListener
 import com.krayapp.rickandmortyapplication.R
 import com.krayapp.rickandmortyapplication.databinding.OpenedCharacterFragmentBinding
 import com.krayapp.rickandmortyapplication.model.CharacterInfo
@@ -14,6 +15,7 @@ import com.krayapp.rickandmortyapplication.toast
 import com.krayapp.rickandmortyapplication.viewmodel.OpenedCharacterViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class OpenedCharacterFragment:Fragment(R.layout.opened_character_fragment) {
@@ -28,15 +30,20 @@ class OpenedCharacterFragment:Fragment(R.layout.opened_character_fragment) {
 
     private val viewBinding:OpenedCharacterFragmentBinding by viewBinding()
     private val viewModel:OpenedCharacterViewModel by viewModel()
+    private val networkListener: NetworkListener by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getCharacterById(requireArguments().getInt(CHARACTER_KEY))
+        if(networkListener.isOnline()){
+            viewModel.getCharacterById(requireArguments().getInt(CHARACTER_KEY))
+        }else{
+            toast("Need internet connection")
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         toast("Loading...")
-        collectInfo()
+            collectInfo()
     }
     private fun collectInfo(){
         viewModel.characterFlow.onEach {
