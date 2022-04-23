@@ -23,6 +23,10 @@ class MainFragment : Fragment(R.layout.main_fragment), OpenCharacterDelegate {
     private val viewModel: MainViewModel by viewModel()
     private val characterAdapter = CharacterAdapter(this)
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.loadCharacters()
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewBinding.mainRecycler.adapter = characterAdapter

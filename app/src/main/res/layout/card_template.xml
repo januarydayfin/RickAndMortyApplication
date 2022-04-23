@@ -2,11 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardDefaultStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    style="@style/CardDefaultStyle"
-    android:theme="@style/CardDefaultStyle"
-    android:layout_margin="15dp">
+    android:layout_margin="15dp"
+    android:theme="@style/CardDefaultStyle">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,32 +23,38 @@
             app:shapeAppearanceOverlay="@style/roundedImageView" />
 
         <TextView
+            android:layout_marginStart="10dp"
             android:id="@+id/gender"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/race"
-            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             tools:text="Male" />
 
         <TextView
+            android:layout_marginEnd="10dp"
             android:id="@+id/race"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/gender"
-            app:layout_constraintTop_toBottomOf="@+id/gender"
+            app:layout_constraintEnd_toStartOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@id/name"
+
             tools:text="Human" />
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/card_name_size"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            app:autoSizeMaxTextSize="40sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@+id/gender"
             app:layout_constraintEnd_toStartOf="@+id/image"
             app:layout_constraintHorizontal_bias="0.5"
