@@ -8,7 +8,7 @@ class RickMortyApp: Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin{
-            androidContext(this@RickMortyApp),
+            androidContext(this@RickMortyApp)
             modules(Koin.getModules())
         }
     }

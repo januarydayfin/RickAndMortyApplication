@@ -3,6 +3,7 @@ package com.krayapp.rickandmortyapplication.model.retrofit
 import com.google.gson.annotations.Expose
 
 data class ResponseDTO (
+    @Expose val info: InfoDTO,
     @Expose val results:List<CharacterDTO>
 )
 data class CharacterDTO (
@@ -17,4 +18,10 @@ data class CharacterDTO (
 )
 data class LocationDTO(
     @Expose val name: String
+)
+data class InfoDTO(
+    @Expose val count: Int,
+    @Expose val pages: Int,
+    @Expose val next: String,
+    @Expose val prev: Any? = null
 )
