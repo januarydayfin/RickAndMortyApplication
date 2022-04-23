@@ -1,5 +1,7 @@
 package com.krayapp.rickandmortyapplication
 
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.krayapp.rickandmortyapplication.model.CharacterInfo
 import com.krayapp.rickandmortyapplication.model.retrofit.CharacterDTO
 
@@ -14,3 +16,5 @@ fun CharacterDTO.toCharacterInfo() =
         image = this.image,
         episodeCount = this.episode.size
     )
+
+fun Fragment.toast(text:String) = Toast.makeText(context,text, Toast.LENGTH_SHORT).show()

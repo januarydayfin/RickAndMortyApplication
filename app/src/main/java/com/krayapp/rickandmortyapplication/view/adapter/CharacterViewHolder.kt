@@ -11,8 +11,8 @@ class CharacterViewHolder(private val binding: CardTemplateBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(characterInfo: CharacterInfo, delegate: OpenCharacterDelegate) {
         with(binding) {
-            gender.text = characterInfo.gender
-            race.text = characterInfo.race
+            gender.text = "Gender: ${characterInfo.gender}"
+            race.text = "Race: ${characterInfo.race}"
             name.text = characterInfo.name
             ImageLoader.loadPreview(characterInfo.image, image)
             root.setOnClickListener { delegate.clickCharacter(characterInfo.id) }

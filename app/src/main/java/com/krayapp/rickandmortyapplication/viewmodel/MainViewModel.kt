@@ -14,18 +14,24 @@ class MainViewModel(private val repo: IRepo) : ViewModel() {
 
     private var baseJob: Job? = null
     private val baseScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
-    private var _characterListFlow: MutableStateFlow<PagingData<CharacterInfo>> = MutableStateFlow(
-        PagingData.empty())
+    private val _characterListFlow: MutableStateFlow<PagingData<CharacterInfo>> = MutableStateFlow(
+        PagingData.empty()
+    )
 
-    val characterListFlow:StateFlow<PagingData<CharacterInfo>> = _characterListFlow.asStateFlow()
+    val characterListFlow: StateFlow<PagingData<CharacterInfo>> = _characterListFlow.asStateFlow()
 
-    fun loadCharacters(){
+    val showRecyclerFlow: MutableStateFlow<Boolean> = MutableStateFlow(false)
+
+    fun loadCharacters() {
         baseJob?.cancel()
         baseJob = baseScope.launch {
             repo
                 .getAllCharacters()
                 .flow
-                .collectLatest { value -> _characterListFlow.value = value }
+                .collectLatest { value ->
+                    _characterListFlow.value = value
+                    showRecyclerFlow.value = true
+                }
         }
     }
 }

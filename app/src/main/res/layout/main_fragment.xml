@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rick_portal">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_recycler"
@@ -13,5 +14,4 @@
         android:orientation="vertical"
         tools:listitem="@layout/card_template"
         />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
