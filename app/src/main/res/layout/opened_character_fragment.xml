@@ -11,9 +11,10 @@
         android:id="@+id/main_window"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:theme="@style/OpenedWindowStyle">
-
+        android:theme="@style/OpenedWindowStyle"
+        >
             <TextView
+                android:fontFamily="@font/rick_font"
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -21,7 +22,6 @@
                 android:textSize="80sp"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Рик санчез" />
-
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image"
