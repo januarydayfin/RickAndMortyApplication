@@ -2,6 +2,7 @@ package com.krayapp.rickandmortyapplication.model.retrofit
 
 import android.widget.ImageView
 import com.krayapp.rickandmortyapplication.MainActivity
+import com.krayapp.rickandmortyapplication.R
 import com.squareup.picasso.Picasso
 
 object ImageLoader {
@@ -9,6 +10,7 @@ object ImageLoader {
         Picasso
             .get()
             .load(url)
+            .placeholder(R.drawable.hell)
             .resize(400,400)
             .into(container)
     }
@@ -16,6 +18,7 @@ object ImageLoader {
         Picasso
             .get()
             .load(url)
+            .placeholder(R.drawable.hell)
             .resize(1080,1080)
             .into(container)
     }

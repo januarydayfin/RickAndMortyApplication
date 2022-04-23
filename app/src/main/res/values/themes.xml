@@ -15,8 +15,8 @@
     </style>
 
     <style name="CardDefaultStyle">
+        <item name="cardBackgroundColor">@color/grey</item>
         <item name="cardCornerRadius">20dp</item>
-        <item name="android:backgroundTint">@color/white</item>
     </style>
 
     <style name="roundedImageView" >
@@ -25,6 +25,7 @@
     </style>
 
     <style name="OpenedWindowStyle">
+        <item name="openedCardBackground">@color/white</item>
         <item name="android:background">@color/transparent_white</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">30sp</item>
@@ -32,6 +33,6 @@
     </style>
 
     <style name="MainWindowTextStyle">
-        <item name="android:textColor">@color/grey</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

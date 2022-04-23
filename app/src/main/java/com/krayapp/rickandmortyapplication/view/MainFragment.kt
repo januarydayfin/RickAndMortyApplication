@@ -52,6 +52,7 @@ class MainFragment : Fragment(R.layout.main_fragment), OpenCharacterDelegate {
         requireActivity().supportFragmentManager.apply {
             beginTransaction()
                 .add(R.id.container, OpenedCharacterFragment.newInstance(id))
+                .hide(this@MainFragment)
                 .setTransition((FragmentTransaction.TRANSIT_FRAGMENT_FADE))
                 .addToBackStack("")
                 .commitAllowingStateLoss()
