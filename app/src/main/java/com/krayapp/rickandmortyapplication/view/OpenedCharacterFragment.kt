@@ -33,18 +33,17 @@ class OpenedCharacterFragment:Fragment(R.layout.opened_character_fragment) {
     private val networkListener: NetworkListener by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getCharacterById(requireArguments().getInt(CHARACTER_KEY))
+        if(networkListener.isOnline()){
+            viewModel.getCharacterById(requireArguments().getInt(CHARACTER_KEY))
+        }else{
+            toast("Need internet connection")
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         toast("Loading...")
-        if(networkListener.isOnline()){
             collectInfo()
-        }else{
-            toast("Need internet connection")
-        }
-
     }
     private fun collectInfo(){
         viewModel.characterFlow.onEach {
