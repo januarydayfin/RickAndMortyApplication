@@ -32,7 +32,6 @@
     </style>
 
     <style name="MainWindowTextStyle">
-        <item name="fontFamily">sans-serif-condensed-light</item>
         <item name="android:textColor">@color/grey</item>
     </style>
 </resources>
