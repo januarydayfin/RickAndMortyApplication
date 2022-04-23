@@ -15,11 +15,6 @@ import com.krayapp.rickandmortyapplication.databinding.ActivityMainBinding
 import com.krayapp.rickandmortyapplication.view.MainFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
-    private val viewBinding: ActivityMainBinding by viewBinding()
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-    }
-
     override fun onResume() {
         super.onResume()
         if (isOnline()) {
