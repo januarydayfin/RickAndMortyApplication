@@ -11,7 +11,7 @@ object ImageLoader {
             .resize(400,400)
             .into(container)
     }
-    fun loadPoster(url:String, container:ImageView){
+    fun loadPortrait(url:String, container:ImageView){
         Picasso
             .get()
             .load(url)

@@ -11,12 +11,12 @@ import retrofit2.HttpException
 
 class Repo(private val api: CharacterSource) : IRepo {
 
-    override suspend fun getAllCharacters(): Flow<PagingData<CharacterInfo>> =
+    override suspend fun getAllCharacters(): Pager<Int,CharacterInfo> =
         Pager(
             config = PagingConfig(enablePlaceholders = false, pageSize = 15),
             pagingSourceFactory = {
                 CharacterPagingSource(api)
-            }).flow
+            })
 
 
     override suspend fun fetchCharacterById(id: Int): CharacterInfo {
