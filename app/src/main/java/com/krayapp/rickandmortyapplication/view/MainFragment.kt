@@ -1,13 +1,11 @@
 package com.krayapp.rickandmortyapplication.view
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.addRepeatingJob
-import androidx.lifecycle.lifecycleScope
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.krayapp.rickandmortyapplication.R
 import com.krayapp.rickandmortyapplication.databinding.MainFragmentBinding
@@ -15,8 +13,6 @@ import com.krayapp.rickandmortyapplication.toast
 import com.krayapp.rickandmortyapplication.view.adapter.CharacterAdapter
 import com.krayapp.rickandmortyapplication.viewmodel.MainViewModel
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment(R.layout.main_fragment), OpenCharacterDelegate {

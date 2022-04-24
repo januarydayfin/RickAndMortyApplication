@@ -1,7 +1,6 @@
 package com.krayapp.rickandmortyapplication.view
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -9,8 +8,8 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.krayapp.rickandmortyapplication.NetworkListener
 import com.krayapp.rickandmortyapplication.R
 import com.krayapp.rickandmortyapplication.databinding.OpenedCharacterFragmentBinding
-import com.krayapp.rickandmortyapplication.model.CharacterInfo
-import com.krayapp.rickandmortyapplication.model.retrofit.ImageLoader
+import com.krayapp.datamodule.model.CharacterInfo
+import com.krayapp.datamodule.model.retrofit.ImageLoader
 import com.krayapp.rickandmortyapplication.toast
 import com.krayapp.rickandmortyapplication.viewmodel.OpenedCharacterViewModel
 import kotlinx.coroutines.flow.launchIn

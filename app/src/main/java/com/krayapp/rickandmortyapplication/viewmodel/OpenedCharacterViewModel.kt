@@ -1,9 +1,8 @@
 package com.krayapp.rickandmortyapplication.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.paging.PagingData
-import com.krayapp.rickandmortyapplication.model.CharacterInfo
-import com.krayapp.rickandmortyapplication.model.IRepo
+import com.krayapp.datamodule.model.CharacterInfo
+import com.krayapp.datamodule.model.IRepo
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

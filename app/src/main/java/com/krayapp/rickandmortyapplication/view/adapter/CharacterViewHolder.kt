@@ -2,9 +2,8 @@ package com.krayapp.rickandmortyapplication.view.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.krayapp.rickandmortyapplication.databinding.CardTemplateBinding
-import com.krayapp.rickandmortyapplication.databinding.OpenedCharacterFragmentBinding
-import com.krayapp.rickandmortyapplication.model.CharacterInfo
-import com.krayapp.rickandmortyapplication.model.retrofit.ImageLoader
+import com.krayapp.datamodule.model.CharacterInfo
+import com.krayapp.datamodule.model.retrofit.ImageLoader
 import com.krayapp.rickandmortyapplication.view.OpenCharacterDelegate
 
 class CharacterViewHolder(private val binding: CardTemplateBinding) :

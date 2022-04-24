@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import com.krayapp.rickandmortyapplication.databinding.CardTemplateBinding
-import com.krayapp.rickandmortyapplication.model.CharacterInfo
+import com.krayapp.datamodule.model.CharacterInfo
 import com.krayapp.rickandmortyapplication.view.OpenCharacterDelegate
 
 class CharacterAdapter(private val delegate: OpenCharacterDelegate) :
