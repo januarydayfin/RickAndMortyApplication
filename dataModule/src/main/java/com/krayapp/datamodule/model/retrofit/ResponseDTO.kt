@@ -1,6 +1,4 @@
-package com.krayapp.rickandmortyapplication.model.retrofit
-
-import com.google.gson.annotations.Expose
+package com.krayapp.datamodule.model.retrofit
 
 data class ResponseDTO (
      val info: InfoDTO,

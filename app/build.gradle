@@ -16,7 +16,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
     buildTypes {
@@ -48,8 +48,7 @@ dependencies {
     implementation "io.insert-koin:koin-android:$koin_version"
     implementation "io.insert-koin:koin-android-compat:$koin_version"
 
-    //Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
+
 
     //LifeCycle
     def lifecycleVersion = '2.4.0-alpha01'
@@ -61,17 +60,13 @@ dependencies {
     implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.3'
     implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.3'
 
-    //Retrofit
-    def retrofit_version = "2.9.0"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
-
     //Paging
     def pagingVersion = "3.0.0"
     implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
 
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+
+    implementation(project(":dataModule"))
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

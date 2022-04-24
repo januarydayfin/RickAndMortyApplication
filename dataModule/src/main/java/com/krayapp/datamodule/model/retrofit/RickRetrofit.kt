@@ -1,4 +1,4 @@
-package com.krayapp.rickandmortyapplication.model.retrofit
+package com.krayapp.datamodule.model.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

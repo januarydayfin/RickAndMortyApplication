@@ -1,8 +1,6 @@
-package com.krayapp.rickandmortyapplication.model
+package com.krayapp.datamodule.model
 
 import androidx.paging.Pager
-import androidx.paging.PagingData
-import kotlinx.coroutines.flow.Flow
 
 interface IRepo {
     suspend fun getAllCharacters(): Pager<Int, CharacterInfo>

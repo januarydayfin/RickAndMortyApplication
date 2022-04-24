@@ -1,8 +1,7 @@
-package com.krayapp.rickandmortyapplication.model.retrofit
+package com.krayapp.datamodule.model.retrofit
 
 import android.widget.ImageView
-import com.krayapp.rickandmortyapplication.MainActivity
-import com.krayapp.rickandmortyapplication.R
+import com.krayapp.datamodule.R
 import com.squareup.picasso.Picasso
 
 object ImageLoader {

@@ -1,12 +1,8 @@
-package com.krayapp.rickandmortyapplication.model
+package com.krayapp.datamodule.model
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import androidx.paging.PagingData
-import com.krayapp.rickandmortyapplication.model.retrofit.CharacterSource
-import com.krayapp.rickandmortyapplication.toCharacterInfo
-import com.krayapp.rickandmortyapplication.view.CharacterPagingSource
-import kotlinx.coroutines.flow.Flow
+import com.krayapp.datamodule.model.retrofit.CharacterSource
 import retrofit2.HttpException
 
 class Repo(private val api: CharacterSource) : IRepo {

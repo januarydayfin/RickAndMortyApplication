@@ -1,4 +1,4 @@
-package com.krayapp.rickandmortyapplication.model
+package com.krayapp.datamodule.model
 
 data class CharacterInfo(
     val id: Int = 0,

@@ -1,11 +1,9 @@
-package com.krayapp.rickandmortyapplication.view
+package com.krayapp.datamodule.model
 
 import android.net.Uri
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.krayapp.rickandmortyapplication.model.CharacterInfo
-import com.krayapp.rickandmortyapplication.model.retrofit.CharacterSource
-import com.krayapp.rickandmortyapplication.toCharacterInfo
+import com.krayapp.datamodule.model.retrofit.CharacterSource
 
 class CharacterPagingSource (private val characterSource: CharacterSource) : PagingSource<Int, CharacterInfo>() {
 
