@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="openedCardBackground" format="reference"/>
+    <attr name="titleToolbarTextColor" format="reference"/>
+    <attr name="popupThemeOverlay" format="reference"/>
+    <attr name="toolbarBackgroundColor" format="reference"/>
 </resources>
