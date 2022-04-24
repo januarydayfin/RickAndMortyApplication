@@ -2,9 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.RickAndMortyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryVariant">@color/yellow_700</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="titleToolbarTextColor">@color/grey</item>
+        <item name="popupThemeOverlay">@style/ThemeOverlay.AppCompat.Dark</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
@@ -15,17 +18,16 @@
     </style>
 
     <style name="CardDefaultStyle">
-        <item name="cardBackgroundColor">@color/grey</item>
-        <item name="cardCornerRadius">20dp</item>
+        <item name="cardBackgroundColor">@color/white_gray</item>
+        <item name="cardCornerRadius">12dp</item>
     </style>
 
     <style name="roundedImageView" >
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">20dp</item>
+        <item name="cornerSize">12dp</item>
     </style>
 
     <style name="OpenedWindowStyle">
-        <item name="openedCardBackground">@color/white</item>
         <item name="android:background">@color/transparent_white</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">30sp</item>
@@ -33,6 +35,11 @@
     </style>
 
     <style name="MainWindowTextStyle">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="titleCharacterStyle">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/grey</item>
     </style>
 </resources>
